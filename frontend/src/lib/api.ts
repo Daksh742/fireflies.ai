@@ -12,8 +12,9 @@ import {
   AskQuestionResponse,
 } from '../types/meeting';
 
-const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL || 'http://127.0.0.1:8000/api/v1';
-
+const API_BASE_URL =
+  process.env.NEXT_PUBLIC_API_BASE_URL ||
+  "https://fireflies-ai-qyjw.onrender.com/api/v1";
 class ApiError extends Error {
   status: number;
   data: any;
