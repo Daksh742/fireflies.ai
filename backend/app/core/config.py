@@ -6,7 +6,12 @@ from pydantic_settings import BaseSettings, SettingsConfigDict
 class Settings(BaseSettings):
     PROJECT_NAME: str = "Fireflies Meeting Intelligence API"
     API_V1_STR: str = "/api/v1"
-    CORS_ORIGINS: List[str] = ["http://localhost:3000", "http://127.0.0.1:3000"]
+    CORS_ORIGINS: List[str] = [
+    "http://localhost:3000",
+    "http://127.0.0.1:3000",
+    "https://fireflies-ai-tau.vercel.app",
+    "https://fireflies-ai-lnkg.vercel.app",
+]
     DATABASE_URL: str = "sqlite:///./fireflies.db"
     STATIC_AUDIO_DIR: str = "./static/audio"
 
