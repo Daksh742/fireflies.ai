@@ -13,7 +13,7 @@ import {
 } from '../types/meeting';
 
 const API_BASE_URL =
-  process.env.NEXT_PUBLIC_API_BASE_URL ||
+  process.env.NEXT_PUB_API_BASE_URL ||
   "https://fireflies-ai-qyjw.onrender.com/api/v1";
 class ApiError extends Error {
   status: number;
