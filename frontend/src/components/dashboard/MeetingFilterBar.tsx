@@ -53,20 +53,23 @@ export const MeetingFilterBar: React.FC<MeetingFilterBarProps> = ({
     { value: 'duration_asc', label: 'Shortest Duration' },
   ];
 
-  return (
-    <div className={styles.filterBar}>
-      <div className={styles.leftControls}>
-        <div className={styles.searchWrapper}>
-          <Input
-            icon={<Search size={16} />}
-            placeholder="Search meetings by title or participant..."
-            value={searchQuery}
-            onChange={(e) => onSearchChange(e.target.value)}
-          />
-        </div>
+ 
+return (
+  <div className={styles.filterBar}>
+    <div className={styles.leftControls}>
+      <div className={styles.searchWrapper}>
+        <Input
+          id="meeting-search"
+          name="meetingSearch"
+          icon={<Search size={16} />}
+          placeholder="Search meetings by title or participant..."
+          value={searchQuery}
+          onChange={(e) => onSearchChange(e.target.value)}
+        />
+      </div>
 
-        <Select
-          options={participantOptions}
+      <Select
+        options={participantOptions}
           value={selectedParticipant}
           onChange={(e) => onParticipantChange(e.target.value)}
         />
