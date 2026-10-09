@@ -1,0 +1,61 @@
+.avatar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-full);
+  font-weight: 600;
+  color: var(--brand-primary);
+  background-color: var(--brand-light);
+  border: 1.5px solid var(--bg-surface);
+  user-select: none;
+  flex-shrink: 0;
+}
+
+.sm {
+  width: 26px;
+  height: 26px;
+  font-size: 0.7rem;
+}
+
+.md {
+  width: 32px;
+  height: 32px;
+  font-size: 0.8rem;
+}
+
+.lg {
+  width: 40px;
+  height: 40px;
+  font-size: 0.95rem;
+}
+
+.xl {
+  width: 56px;
+  height: 56px;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.avatarGroup {
+  display: flex;
+  align-items: center;
+}
+
+.avatarGroup > .avatar:not(:first-child) {
+  margin-left: -8px;
+}
+
+.moreCount {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  border-radius: var(--radius-full);
+  background-color: var(--bg-subtle);
+  color: var(--text-secondary);
+  border: 1.5px solid var(--bg-surface);
+  font-size: 0.65rem;
+  font-weight: 600;
+  margin-left: -8px;
+}

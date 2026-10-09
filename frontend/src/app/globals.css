@@ -1,0 +1,183 @@
+/* ==========================================================================
+   Fireflies.ai Meeting Intelligence — Pure Black, Minimal, Premium Design Tokens
+   ========================================================================== */
+
+/* Dark Theme (DEFAULT) — Pure Black & Charcoal Neutral Scale */
+:root, [data-theme="dark"] {
+  --bg-main: #09090b;           /* Dark charcoal application background */
+  --bg-base: #09090b;           /* Base background alias */
+  --bg-sidebar: #0a0a0a;        /* Sidebar navigation background */
+  --bg-surface: #0f0f0f;        /* Primary surface fill */
+  --bg-elevated: #151515;       /* Elevated / hover surface fill */
+  --bg-subtle: #121212;         /* Input & badge fill */
+  --bg-hover: #1c1c1c;          /* Control hover fill */
+  --bg-active: #222222;
+
+  --border-color: #202020;      /* Subtle 1px neutral border */
+  --border-hover: #2a2a2a;      /* Hover state border */
+  --border-strong: #333333;     /* Stronger neutral border */
+  --border-focus: #6366f1;
+
+  --text-primary: #f5f5f5;      /* Off-white primary text */
+  --text-secondary: #a1a1a1;    /* Muted grey secondary text */
+  --text-muted: #666666;        /* Darker muted text */
+  --text-sm: 0.875rem;
+
+  /* ONE Primary Product Accent (Used strictly ON INTERACTION) */
+  --brand-primary: #6366f1;
+  --brand-hover: #4f46e5;
+  --brand-light: rgba(99, 102, 241, 0.1);
+  --brand-border: rgba(99, 102, 241, 0.3);
+  --brand-glow: rgba(99, 102, 241, 0.15);
+
+  --success-bg: rgba(34, 197, 94, 0.1);
+  --success-text: #4ade80;
+  --success-border: rgba(34, 197, 94, 0.25);
+
+  --warning-bg: rgba(245, 158, 11, 0.1);
+  --warning-text: #fbbf24;
+  --warning-border: rgba(245, 158, 11, 0.25);
+
+  --danger-bg: rgba(239, 68, 68, 0.1);
+  --danger-text: #f87171;
+  --danger-border: rgba(239, 68, 68, 0.25);
+
+  --shadow-xs: 0 1px 2px 0 rgba(0, 0, 0, 0.6);
+  --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.7);
+  --shadow-lg: 0 10px 25px -5px rgba(0, 0, 0, 0.6);
+
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+
+  --radius-xs: 4px;
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 10px;
+  --radius-xl: 12px;
+  --radius-full: 9999px;
+
+  --transition-fast: 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Light Theme Override */
+[data-theme="light"] {
+  --bg-main: #fafafa;
+  --bg-base: #fafafa;
+  --bg-sidebar: #f5f5f5;
+  --bg-surface: #ffffff;
+  --bg-elevated: #f0f0f0;
+  --bg-subtle: #f5f5f5;
+  --bg-hover: #e5e5e5;
+  --bg-active: #d4d4d4;
+
+  --border-color: #e5e5e5;
+  --border-hover: #d4d4d4;
+  --border-strong: #d4d4d4;
+  --border-focus: #6366f1;
+
+  --text-primary: #171717;
+  --text-secondary: #525252;
+  --text-muted: #a3a3a3;
+  --text-sm: 0.875rem;
+
+  --brand-primary: #6366f1;
+  --brand-hover: #4f46e5;
+  --brand-light: #eeeffe;
+  --brand-border: #c7d2fe;
+  --brand-glow: rgba(99, 102, 241, 0.15);
+
+  --shadow-xs: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+/* Base Resets */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  min-height: 100vh;
+  background-color: var(--bg-main);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  font-size: 15px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+/* Atmospheric Fireflies Starfield Layer (Dark Theme Only) */
+:root body,
+[data-theme="dark"] body {
+  background-color: #09090b;
+  background-image: 
+    radial-gradient(1px 1px at 30px 45px, rgba(255, 255, 255, 0.45), transparent),
+    radial-gradient(1.5px 1.5px at 140px 180px, rgba(255, 255, 255, 0.28), transparent),
+    radial-gradient(1px 1px at 250px 90px, rgba(220, 230, 250, 0.35), transparent),
+    radial-gradient(2px 2px at 360px 240px, rgba(255, 255, 255, 0.48), transparent),
+    radial-gradient(1px 1px at 95px 300px, rgba(200, 210, 230, 0.22), transparent),
+    radial-gradient(1.5px 1.5px at 290px 370px, rgba(255, 255, 255, 0.32), transparent),
+    radial-gradient(1px 1px at 180px 450px, rgba(255, 255, 255, 0.38), transparent),
+    radial-gradient(1.5px 1.5px at 430px 130px, rgba(210, 220, 245, 0.25), transparent),
+    radial-gradient(1px 1px at 490px 400px, rgba(255, 255, 255, 0.3), transparent),
+    radial-gradient(1.2px 1.2px at 70px 160px, rgba(255, 255, 255, 0.32), transparent),
+    radial-gradient(1.5px 1.5px at 410px 310px, rgba(255, 255, 255, 0.36), transparent),
+    radial-gradient(1px 1px at 320px 60px, rgba(200, 215, 240, 0.25), transparent),
+    radial-gradient(1.5px 1.5px at 210px 230px, rgba(255, 255, 255, 0.42), transparent),
+    radial-gradient(circle at 50% 0%, rgba(99, 102, 241, 0.035), transparent 70%);
+  background-size: 
+    540px 540px, 540px 540px, 540px 540px, 540px 540px, 
+    540px 540px, 540px 540px, 540px 540px, 540px 540px, 
+    540px 540px, 540px 540px, 540px 540px, 540px 540px, 
+    540px 540px, 100% 100%;
+  background-repeat: 
+    repeat, repeat, repeat, repeat, 
+    repeat, repeat, repeat, repeat, 
+    repeat, repeat, repeat, repeat, 
+    repeat, no-repeat;
+  background-attachment: fixed;
+}
+
+[data-theme="light"] body {
+  background-color: var(--bg-main);
+  background-image: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button, input, select, textarea {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-main);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-strong);
+  border-radius: var(--radius-full);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-muted);
+}

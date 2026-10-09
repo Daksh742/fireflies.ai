@@ -1,0 +1,55 @@
+.workspaceWrapper {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 60px);
+  max-height: calc(100vh - 60px);
+  flex: 1;
+  min-height: 0;
+  background-color: transparent;
+  overflow: hidden;
+}
+
+.workspaceMain {
+  flex: 1;
+  min-height: 0;
+  display: grid;
+  grid-template-columns: 1fr 1.1fr; /* Left: Notes/Summary, Right: Transcript */
+  overflow: hidden;
+}
+
+@media (max-width: 992px) {
+  .workspaceWrapper {
+    height: auto;
+    max-height: none;
+    overflow: visible;
+  }
+
+  .workspaceMain {
+    display: flex;
+    flex-direction: column;
+    overflow: visible;
+  }
+}
+
+.loadingContainer, .errorContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 2rem;
+  text-align: center;
+  min-height: 60vh;
+  gap: 1rem;
+}
+
+.errorTitle {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--danger-text, #ef4444);
+}
+
+.errorText {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  max-width: 420px;
+}

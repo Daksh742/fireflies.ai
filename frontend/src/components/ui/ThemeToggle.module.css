@@ -1,0 +1,95 @@
+.toggleContainer {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  width: 60px;
+  height: 30px;
+  padding: 3px;
+  background-color: var(--bg-subtle);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  user-select: none;
+  transition: background-color 0.25s ease, border-color 0.25s ease;
+  outline: none;
+}
+
+.toggleContainer:hover {
+  border-color: var(--border-strong);
+}
+
+.toggleContainer:focus-visible {
+  border-color: var(--brand-primary);
+  box-shadow: 0 0 0 3px var(--brand-glow);
+}
+
+/* Sliding pill indicator background */
+.indicator {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 24px;
+  height: 24px;
+  border-radius: var(--radius-full);
+  background-color: var(--bg-surface);
+  box-shadow: var(--shadow-xs);
+  transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.25s ease;
+}
+
+.indicatorDark {
+  transform: translateX(0px);
+}
+
+.indicatorLight {
+  transform: translateX(30px);
+}
+
+/* Icon container elements */
+.iconSlot {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  color: var(--text-muted);
+  transition: color 0.25s ease;
+}
+
+.activeIcon {
+  color: var(--brand-primary);
+}
+
+/* Icon animation styles */
+.moonIcon, .sunIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.25s ease;
+}
+
+.moonIcon {
+  transform: rotate(0deg) scale(1);
+  opacity: 1;
+}
+
+.sunIcon {
+  transform: rotate(-90deg) scale(0.8);
+  opacity: 1;
+}
+
+[data-theme="light"] .moonIcon {
+  transform: rotate(90deg) scale(0.8);
+}
+
+[data-theme="light"] .sunIcon {
+  transform: rotate(0deg) scale(1);
+}
+
+/* Reduced motion accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .indicator, .moonIcon, .sunIcon {
+    transition: none !important;
+  }
+}

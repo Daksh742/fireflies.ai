@@ -1,0 +1,41 @@
+.selectWrapper {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+.select {
+  appearance: none;
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 0.5rem 2.25rem 0.5rem 0.75rem;
+  font-size: var(--text-sm);
+  color: var(--text-primary);
+  cursor: pointer;
+  outline: none;
+  transition: border-color var(--transition-fast), background-color var(--transition-fast);
+}
+
+.select:hover {
+  background-color: var(--bg-elevated);
+  border-color: var(--border-strong);
+}
+
+.select:focus-visible {
+  border-color: var(--border-strong);
+  box-shadow: 0 0 0 2px var(--bg-elevated);
+}
+
+.hasValue {
+  background-color: var(--bg-surface);
+}
+
+.chevron {
+  position: absolute;
+  right: 0.75rem;
+  pointer-events: none;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+}
